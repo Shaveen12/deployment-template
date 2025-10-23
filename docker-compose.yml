@@ -29,6 +29,7 @@ services:
       - acme_state:/etc/acme.sh
     environment:
       - DEFAULT_EMAIL=${ACME_EMAIL}
+      - NGINX_PROXY_CONTAINER=nginx-proxy
     depends_on:
       - nginx-proxy
     networks:
